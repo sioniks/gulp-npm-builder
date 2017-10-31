@@ -1,5 +1,5 @@
 'use strict';
-
+/*const fs = require('fs');*/
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
@@ -11,6 +11,7 @@ global.$ = {
   },
   gulp: require('gulp'),
   del: require('del'),
+  fs: require('fs'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
@@ -27,6 +28,8 @@ $.gulp.task('default', $.gulp.series(
     'js:foundation',
     'js:process',
     'copy:image',
+    'copy:fonts',
+    'morefile',
     'css:foundation',
     'sprite:svg'
   ),

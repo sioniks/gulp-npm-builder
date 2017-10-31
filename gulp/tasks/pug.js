@@ -2,8 +2,14 @@
 
 module.exports = function() {
   $.gulp.task('pug', function() {
+    let fs = require('fs');
+    let locals = './content.json';
+
     return $.gulp.src('./source/template/pages/*.pug')
-      .pipe($.gp.pug({ pretty: true }))
+      .pipe($.gp.pug({
+        locals : JSON.parse(fs.readFileSync('./content.json', 'utf8')), 
+        pretty: true, 
+      }))
       .on('error', $.gp.notify.onError(function(error) {
         return {
           title: 'Pug',
