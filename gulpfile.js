@@ -1,5 +1,5 @@
 'use strict';
-/*const fs = require('fs');*/
+
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
