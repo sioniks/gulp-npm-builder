@@ -25,7 +25,6 @@
     "animate.css": "^3.5.2",
     "aos": "^2.2.0",
     "file-system": "^2.2.2",
-    "fs": "0.0.1-security",
     "fullpage.js": "^2.9.4",
     "jquery": "~3.2.1",
     "jquery-plugin-viewport-checker": "^1.8.3",
